@@ -19,7 +19,7 @@ datagen = ImageDataGenerator(
 
 # Cargar las imágenes de entrenamiento
 train_generator = datagen.flow_from_directory(
-    'datos',  # Directorio base que contiene 'maligno/' y 'benigno/'
+    'datos\Entreno',  # Directorio base que contiene 'maligno/' y 'benigno/'
     target_size=IMG_SIZE,
     batch_size=BATCH_SIZE,
     class_mode='binary',  # Clasificación binaria (0 = benigno, 1 = maligno)
@@ -28,7 +28,7 @@ train_generator = datagen.flow_from_directory(
 
 # Cargar las imágenes de validación
 val_generator = datagen.flow_from_directory(
-    'datos',
+    'datos\Entreno',
     target_size=IMG_SIZE,
     batch_size=BATCH_SIZE,
     class_mode='binary',
